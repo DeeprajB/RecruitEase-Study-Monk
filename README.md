@@ -12,6 +12,9 @@
     <li>
       <a href="#about-the-project">About The Project</a>
     </li>
+    <li>
+      <a href="#figma-design">Figma Design</a>
+    </li>
   </ol>
 </details>
 
@@ -33,3 +36,7 @@ The three pages are:
     </li>
 </ol>
 <br />
+
+## Figma Design
+
+The Link to preview the figma design is <a href="https://www.figma.com/proto/tuZrqzGFNURRM6QVIZgwGs/RecruitEase(Study-Monk)?page-id=0%3A1&type=design&node-id=3-21&viewport=340%2C-82%2C0.83&t=RRYb4wdCUrwf8CBN-1&scaling=min-zoom&starting-point-node-id=3%3A21&mode=design">here.</a>
