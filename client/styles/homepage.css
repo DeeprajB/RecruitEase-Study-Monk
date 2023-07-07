@@ -139,3 +139,33 @@ body {
     padding: 0.5rem 1rem;
     margin-bottom: 1rem;
 }
+
+/* Advantages Section */
+.advantages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    gap: 2rem;
+}
+
+.advantages-title {
+    color: #ffffff;
+    font-family: 'Comfortaa';
+    font-weight: bold;
+    font-size: 48px;
+}
+
+.advantage-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+.advantage-text {
+    max-width: 55vw;
+    padding: 1rem 2rem;
+    font-family: 'Montserrat';
+    font-weight: 300;
+    font-size: 20px;
+}
