@@ -20,7 +20,7 @@
 
 ## About The Project
 
-
+![HomePage](./Screenshots//Homepage.png)<br />
 RecruitEase is a frontend task by Study Monk to design and develop a digital recruitment solution app aimed at providing a seamless hiring experience for multiple MNCs.
 The three pages are:
 <br />
