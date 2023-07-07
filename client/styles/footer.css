@@ -7,7 +7,6 @@
     padding-top: 1rem;
     padding-bottom: 0.5rem;
     width: 100vw;
-    /* height: 6rem; */
 }
 
 .footer-tag {
@@ -18,18 +17,12 @@
     margin-bottom: 0.5rem;
 }
 
-.two-columns-container {
+.footer-two-columns-container {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 50px;
     margin-bottom: 0.5rem;
-    /* justify-content: space-around; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* padding-left: 3rem;
-    padding-right: 3rem; */
-    /* height: 6rem; */
 }
 
 .about {
