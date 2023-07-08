@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecruitEase</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/nav.css">
+    <link rel="stylesheet" href="../styles/dashboard.css">
+    <script src="../scripts/dashboard.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="/pages/homepage.html"><img src="../assets/RecruitEaseLogo.png" alt="Recruit Ease Logo" height="50px"></a>
+            </div>
+            <div class="links">
+                <a href="#dashboard"><h1 class="navlink">Dashboard</h1></a>
+                <a href="#about"><h1 class="navlink">About</h1></a>
+                <a href="#contact"><h1 class="navlink">Contact</h1></a>
+                <button class="loginbutton"><h1 class="loginbuttontext">LOGIN</h1></button>
+            </div>
+        </div>
+    </nav>
+    <div class="flex-container">
+        <div class="grid-container">
+            <main class="all-candidates">
+                <div class="container">
+                    <input type="text" class="location-input" name="location" id="location" placeholder="Search Location...">
+                    <h1 class="all-candidates-title">All Candidates</h1>
+                </div>
+                <hr>
+                <div class="display-table" id="display-table">
+                    <table>
+                        <thead><tr>
+                          <th><span id="name" class="table-column">Name</span></th>
+                          <th><span id="email" class="table-column">Email</span></th>
+                          <th><span id="age" class="table-column">Age</span></th>
+                          <th><span id="location" class="table-column">Location</span></th>
+                          <th><span id="role" class="table-column">Role</span></th>
+                          <th><span id="selected" class="table-column">Selected</span></th>
+                          <th><span id="attachments" class="table-column">Attachments</span></th>
+                          <th><span id="select" class="table-column">Select</span></th>
+                        </tr></thead>
+                        <tbody id="alltable"></tbody>
+                    </table>
+                </div>
+            </main>
+            <div class="roles">
+                <h1 class="roles-title">Roles</h1>
+                <hr>
+                <div class="roles-button" id="roles-button"></div>
+            </div>
+            <div class="selected-candidates">
+                <div class="container">
+                    <input type="text" class="candidate-input" name="candidate" id="candidate" placeholder="Search Candidate...">
+                    <h1 class="selected-candidates-title">Selected Candidates</h1>
+                </div>
+                <hr>
+                <div class="display-table" id="display-table">
+                    <table>
+                        <thead><tr>
+                          <th><span id="name" class="table-column">Name</span></th>
+                          <th><span id="email" class="table-column">Email</span></th>
+                          <th><span id="age" class="table-column">Age</span></th>
+                          <th><span id="location" class="table-column">Location</span></th>
+                          <th><span id="role" class="table-column">Role</span></th>
+                          <th><span id="selected" class="table-column">Selected</span></th>
+                          <th><span id="attachments" class="table-column">Attachments</span></th>
+                        </tr></thead>
+                        <tbody id="selecttable"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
