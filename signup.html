@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecruitEase - Sign Up</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./reset.css">
+    <script src="./signup.js"></script>
+    <style>
+        body {
+            background-color: #323232;
+        }
+        .nav-container {
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 6rem;
+        }
+        main {
+            height: calc(100vh - 6rem);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+        }
+        progress {
+            opacity: 0;
+        }
+        :root{
+            --pseudo-width: 0%;
+        }
+        .progress-container {
+            position: relative;
+            display: inline-block;
+            background: white;
+            width: 45vw;
+            height: 5px;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        .progress-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: var(--pseudo-width);
+            background: #000000;
+          }
+        .signup-form {
+            background-color: white;
+            width: 45vw;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: start;
+            border-radius: 20px;
+        }
+        .signup-title{
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            font-family: 'Comfortaa';
+            font-size: 40px;
+            font-weight: 900;
+            align-self: center;
+        }
+        .form{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            padding-left: 3rem;
+            margin-bottom: 2rem;
+        }
+        label {
+            font-family: 'Comfortaa';
+            font-size: 24px;
+            font-weight: 500;
+            color: #606060;
+        }
+        .asterisk {
+            color: red;
+        }
+        input {
+            margin-top: 0.5rem;
+            width: 35vw;
+            padding: 1rem;
+            border: 0;
+            border-radius: 10px;
+            background-color: #D9D9D9;
+            margin-bottom: 1rem;
+        }
+        .signup-right-button {
+            background-color: #323232;
+            border: none;
+            color: white;
+            padding: 1rem;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            border-radius: 5px;
+            align-self: center;
+            margin-bottom: 1.5rem;
+        }
+        .signup-left-button {
+            background-color: #323232;
+            border: none;
+            color: white;
+            padding: 1rem;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            border-radius: 5px;
+            align-self: center;
+            margin-bottom: 1.5rem;
+            display: none;
+        }
+        .signup-button {
+            background-color: #323232;
+            border: none;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            text-decoration: none;
+            font-size: 33px;
+            cursor: pointer;
+            border-radius: 5px;
+            align-self: center;
+            margin-bottom: 1.5rem;
+            display: none;
+        }
+        .buttons{
+            align-self: center;
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+        }
+        ::placeholder {
+            font-family: 'Montserrat';
+            font-weight: 300;
+        }
+        .signup-password-container{
+            display: flex;
+            flex-direction: row;
+            gap: 1.5rem;
+        }
+        .signup-password-container-1 > input {
+            width: 15.5vw;
+        }
+        .signup-password-container-2 > input {
+            width: 15.5vw;
+        }
+        textarea {
+            margin-top: 0.5rem;
+            width: 35vw;
+            padding: 1rem;
+            border: 0;
+            border-radius: 10px;
+            background-color: #D9D9D9;
+            margin-bottom: 1rem;
+        }
+        .tab {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="/"><img src="./RecruitEaseLogo.png" alt="Recruit Ease Logo" height="50px"></a>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="progress-container">
+            <progress value={progress} max="100"></progress>
+        </div>
+        <section class="signup-form">
+            <h1 class="signup-title" id="signup-title"></h1>
+            <form class="form" id="regForm">
+                <div class="tab">
+                    <div class="signup-company-name-container">
+                        <label for="signup-company-name">Company Name<span class="asterisk">*</span></label><br />
+                        <input type="text" name="signup-company-name" id="signup-company-name" placeholder="Enter your Company Name...">
+                    </div>
+                    <div class="signup-company-url-container">
+                        <label for="signup-company-url">Company Website<span class="asterisk">*</span></label><br />
+                        <input type="text" name="signup-company-url" id="signup-company-url" placeholder="Enter your Company Website...">
+                    </div>
+                  </div>
+                  <div class="tab">
+                    <div class="signup-username-container">
+                        <label for="signup-username">Full Name<span class="asterisk">*</span></label><br />
+                        <input type="text" name="signup-username" id="signup-username" placeholder="Enter your Full Name...">
+                    </div>
+                    <div class="signup-email-container">
+                        <label for="signup-email">Email<span class="asterisk">*</span></label><br />
+                        <input type="email" name="signup-email" id="signup-email" placeholder="Enter your Email...">
+                    </div>
+                    <div class="signup-password-container">
+                        <div class="signup-password-container-1">
+                            <label for="signup-password">Password<span class="asterisk">*</span></label><br />
+                            <input type="password" name="signup-password" id="signup-password" placeholder="Enter your Password...">
+                        </div>
+                        <div class="signup-password-container-2">
+                            <label for="signup-confirm-password">Confirm Password<span class="asterisk">*</span></label><br />
+                            <input type="password" name="signup-confirm-password" id="signup-confirm-password" placeholder="Confirm your Password...">
+                        </div>
+                    </div>
+                  </div>
+                  <div class="tab">
+                    <div class="signup-industry-type-container">
+                        <label for="signup-industry-type">Industry Type<span class="asterisk">*</span></label><br />
+                        <input type="text" name="signup-industry-type" id="signup-industry-type" placeholder="Enter the of Industry...">
+                    </div>
+                    <div class="signup-industry-size-container">
+                        <label for="signup-industry-size">Industry Size<span class="asterisk">*</span></label><br />
+                        <input type="number" name="signup-industry-size" id="signup-industry-size" placeholder="Enter the size of your Company...">
+                    </div>
+                    <div class="signup-location-container">
+                        <label for="signup-location">Location<span class="asterisk">*</span></label><br />
+                        <input type="text" name="signup-location" id="signup-location" placeholder="Enter the Location...">
+                    </div>
+                  </div>
+                  <div class="tab">
+                    <div class="signup-details-container">
+                        <label for="signup-details">How did you hear about us?</label><br />
+                        <textarea name="signup-details" id="signup-details" placeholder="Type away..." rows="3" cols="50"></textarea>
+                        <!-- <input type="textarea" name="signup-details" id="signup-details" placeholder="Type away..."> -->
+                    </div>
+                    <div class="signup-requirements-container">
+                        <label for="signup-requirements">Any specific requirements?</label><br />
+                        <!-- <input type="textarea" name="signup-requirements" id="signup-requirements" placeholder="Type away..."> -->
+                        <textarea name="signup-requirements" id="signup-requirements" placeholder="Type away..." rows="3" cols="50"></textarea>
+                    </div>
+                  </div>
+            </form>
+            <div class="buttons">
+                <button class="signup-left-button" id="prev-button"><img src="./LeftArrow.svg" height="35px" alt="Left Arrow Vector"></button>
+                <button class="signup-button" id="signup-button"><h1 class="signup-button-text">SIGN UP</h1></button>
+                <button class="signup-right-button" id="next-button"><img src="./RightArrow.svg" height="35px" alt="Right Arrow Vector"></button>
+            </div>
+        </section>
+    </main>
+</body>
+<script type="text/javascript">
+    document.getElementById("signup-button").onclick = async function () {
+
+        let company_name = document.getElementById('signup-company-name').value
+        let company_url = document.getElementById('signup-company-url').value
+        let username = document.getElementById('signup-username').value
+        let email = document.getElementById('signup-email').value
+        let password = document.getElementById('signup-password').value
+        let industry_type = document.getElementById('signup-industry-type').value
+        let industry_size = document.getElementById('signup-industry-size').value
+        let location = document.getElementById('signup-location').value
+        let details = document.getElementById('signup-details').value
+        let requirements = document.getElementById('signup-requirements').value
+        const res = await fetch('https://recruit-ease-backend.vercel.app/users/signup', {
+            method: 'POST',
+            body: JSON.stringify({
+                company_name: company_name,
+                company_url: company_url,
+                username: username,
+                email: email,
+                password: password,
+                industry_type: industry_type,
+                industry_size: industry_size,
+                location: location,
+                details: details,
+                requirements: requirements
+                }),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+              },
+        })
+        const data = await res.json()
+        window.localStorage.setItem("name", data.user.username);
+        window.localStorage.setItem("token", data.token);
+        location.href = "./dashboard.html";
+    };
+</script>
+</html>

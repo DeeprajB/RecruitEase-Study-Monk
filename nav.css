@@ -1,0 +1,43 @@
+.nav-container {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    height: 6rem;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+
+.links > a {
+    text-decoration: none;
+    color: #323232;
+    font-family: 'DM Sans';
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.loginbutton{
+  background-color: #323232;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.loginbuttontext {
+    font-family: 'DM Sans';
+    font-weight: bold;
+}

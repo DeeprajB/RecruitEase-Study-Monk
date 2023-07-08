@@ -1,0 +1,171 @@
+body {
+    background-color: #323232;
+}
+
+/* Hero Section */
+
+.herosec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.herosec-title{
+    margin-top: 3rem;
+    color: white;
+    font-family: 'DM Sans';
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.herosec-name{
+    margin-top: 0.5rem;
+    color: white;
+    font-family: 'Comfortaa';
+    font-size: 50px;
+    font-weight: 900;
+}
+
+.herosec-two-columns-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.introduction {
+    color: white;
+    font-family: 'Montserrat';
+    font-size: 24px;
+    font-weight: 300;
+    max-width: 45vw;
+    margin-left: 3rem;
+}
+
+.herosec-vl {
+    border-left: 5px solid #ffffff;
+    border-radius: 5px;
+    height: 250px;
+}
+
+.cta-para {
+    color: white;
+    font-family: 'Montserrat';
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+.cta-button {
+    background-color: #ffffff;
+    border: none;
+    color: white;
+    padding: 7.5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+    margin-bottom: 2.5rem;
+
+}
+
+.cta-button-text {
+    color: #323232;
+    font-family: 'DM Sans';
+    font-weight: bold;
+}
+
+/* Key Features Section */
+
+.key-features {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.features-title {
+    color: #323232;
+    font-family: 'Comfortaa';
+    font-weight: bold;
+    font-size: 48px;
+}
+
+.features-three-columns-container {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+}
+
+.feature-card{
+    background-color: #323232;
+    margin-top: 2rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-card-animation {
+    margin-top: 1rem;
+}
+
+.feature-card-title {
+    color: white;
+    font-family: 'DM Sans';
+    font-weight: medium;
+    font-size: 20px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.feature-card-text {
+    color: white;
+    font-family: 'Montserrat';
+    font-weight: 300;
+    font-size: 16px;
+    text-align: center;
+    max-width: 20vw;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Advantages Section */
+.advantages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    gap: 2rem;
+}
+
+.advantages-title {
+    color: #ffffff;
+    font-family: 'Comfortaa';
+    font-weight: bold;
+    font-size: 48px;
+}
+
+.advantage-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+.advantage-text {
+    max-width: 55vw;
+    padding: 1rem 2rem;
+    font-family: 'Montserrat';
+    font-weight: 300;
+    font-size: 20px;
+}

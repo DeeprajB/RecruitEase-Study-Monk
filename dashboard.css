@@ -1,0 +1,159 @@
+body {
+    background-color: #323232;
+}
+
+/* Dashboard Section */
+
+.flex-container {
+    height: calc(100vh-6rem);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 3rem;
+    /* align-items: center; */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    grid-template-rows: 1fr 200px;
+    grid-template-areas:
+        'roles all-candidates'
+        'roles selected-candidates';
+    grid-gap: 2rem;
+    height: 75vh;
+    width: calc(100vw - 6rem)
+}
+
+.all-candidates {
+    grid-area: all-candidates;
+    background-color: white;
+    border-radius: 20px;
+    overflow-y: scroll;
+}
+
+.roles {
+    grid-area: roles;
+    background-color: white;
+    border-radius: 20px;
+    overflow-y: scroll;
+}
+
+.selected-candidates {
+    grid-area: selected-candidates;
+    background-color: white;
+    border-radius: 20px;
+    overflow-y: scroll;
+}
+
+.roles-input {
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    width: 86%;
+    padding: 0.5rem;
+    border: 0;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+}
+
+.location-input {
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    width: 50%;
+    padding: 0.5rem;
+    border: 0;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+}
+
+.all-candidates-title {
+    margin-top: 1rem;
+    font-family: 'Comfortaa';
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 45% 55%;
+}
+
+.selected-candidates-title {
+    margin-top: 1rem;
+    font-family: 'Comfortaa';
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.candidate-input {
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    width: 50%;
+    padding: 0.5rem;
+    border: 0;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+}
+
+table{
+    /* margin: 1rem; */
+    width: 100%;
+}
+
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #323232;
+    color: white;
+}
+
+.signup-button {
+    background-color: #323232;
+    border: none;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+    align-self: center;
+    margin-bottom: 1.5rem;
+}
+
+.styled-button {
+    /* background-color: #323232; */
+    border-color: black;
+    color: black;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 10px;
+    align-self: center;
+    width: 85%;
+    margin-bottom: 1.5rem;
+    font-family: 'Comfortaa';
+    font-weight: 900;
+}
+
+.roles-button {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+}
+
+.roles-title {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    font-family: 'Comfortaa';
+    font-size: 20px;
+    font-weight: 900;
+}

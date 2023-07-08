@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecruitEase - Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./reset.css">
+    <style>
+        body {
+            background-color: #323232;
+        }
+        .nav-container {
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 6rem;
+        }
+        main {
+            height: calc(100vh - 6rem);
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .login-form {
+            background-color: white;
+            width: 35vw;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: start;
+            border-radius: 20px;
+        }
+        .login-title{
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            font-family: 'Comfortaa';
+            font-size: 40px;
+            font-weight: 900;
+            align-self: center;
+        }
+        .form{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            padding-left: 3rem;
+            margin-bottom: 2rem;
+        }
+        label {
+            font-family: 'Comfortaa';
+            font-size: 24px;
+            font-weight: 500;
+            color: #606060;
+        }
+        .asterisk {
+            color: red;
+        }
+        input {
+            margin-top: 0.5rem;
+            width: 25vw;
+            padding: 1rem;
+            border: 0;
+            border-radius: 10px;
+            background-color: #D9D9D9;
+        }
+        .login-button {
+            background-color: #323232;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            align-self: center;
+            margin-bottom: 1.5rem;
+        }
+        ::placeholder {
+            font-family: 'Montserrat';
+            font-weight: 300;
+          }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="/"><img src="./RecruitEaseLogo.png" alt="Recruit Ease Logo" height="50px"></a>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section class="login-form">
+            <h1 class="login-title">Welcome Back!</h1>
+            <form class="form">
+                <div class="login-email-container">
+                    <label for="login-email">Email<span class="asterisk">*</span></label><br />
+                    <input type="email" name="login-email" id="login-email" placeholder="Enter your Email...">
+                </div>
+                <div class="login-password-container">
+                    <label for="password">Password<span class="asterisk">*</span></label><br />
+                    <input type="password" name="login-password" id="login-password" placeholder="Enter your Password...">
+                </div>
+            </form>
+            <button class="login-button"><h1 class="login-button-text" id="login-button">LOGIN</h1></button>
+        </section>
+    </main>
+</body>
+<script type="text/javascript">
+    document.getElementById("login-button").onclick = async function () {
+        let email = document.getElementById('login-email').value
+        let password = document.getElementById('login-password').value
+        const res = await fetch('https://recruit-ease-backend.vercel.app/users/login', {
+            method: 'POST',
+            body: JSON.stringify( { email: email, password: password } ),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+              },
+        })
+        const data = await res.json()
+        window.localStorage.setItem("name", data.user.username);
+        window.localStorage.setItem("token", data.token);
+        location.href = "./dashboard.html";
+    };
+</script>
+</html>
