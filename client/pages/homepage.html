@@ -20,10 +20,10 @@
                 <a href="/pages/homepage.html"><img src="../assets/RecruitEaseLogo.png" alt="Recruit Ease Logo" height="50px"></a>
             </div>
             <div class="links">
-                <a href="#dashboard"><h1 class="navlink">Dashboard</h1></a>
+                <a href="/pages/dashboard.html"><h1 class="navlink">Dashboard</h1></a>
                 <a href="#about"><h1 class="navlink">About</h1></a>
                 <a href="#contact"><h1 class="navlink">Contact</h1></a>
-                <button class="loginbutton"><h1 class="loginbuttontext">LOGIN</h1></button>
+                <button class="loginbutton" id="loginbutton"><h1 class="loginbuttontext" id="loginbuttontext">LOGIN</h1></button>
             </div>
         </div>
     </nav>
@@ -36,7 +36,7 @@
                 <div class="herosec-vl"></div>
                 <div class="cta">
                     <p class="cta-para">Experience the future of recruitment with RecruitEase. Sign up today for a free trial and revolutionize your hiring process.</p>
-                    <button class="cta-button"><h1 class="cta-button-text">Sign Up</h1></button>
+                    <button class="cta-button" id="cta-button"><h1 class="cta-button-text">Sign Up</h1></button>
                 </div>
             </div>
         </section>
@@ -100,4 +100,24 @@
         </div>
     </footer>
 </body>
+<script type="text/javascript">
+    let token = window.localStorage.getItem("token")
+    let name = window.localStorage.getItem("name")
+    if (token && name) {
+        let x = document.getElementById("loginbuttontext")
+        x.innerHTML = name
+        document.getElementById("loginbutton").onclick = function () {
+            localStorage.removeItem("name")
+            localStorage.removeItem("token")
+            location.reload()
+        };
+    }else {
+        document.getElementById("loginbutton").onclick = function () {
+            location.href = "/pages/login.html";
+        };
+        document.getElementById("cta-button").onclick = function () {
+            location.href = "/pages/signup.html";
+        };
+    }
+</script>
 </html>
