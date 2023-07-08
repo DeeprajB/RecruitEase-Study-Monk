@@ -31,6 +31,9 @@
         progress {
             opacity: 0;
         }
+        :root{
+            --pseudo-width: 0%;
+        }
         .progress-container {
             position: relative;
             display: inline-block;
@@ -40,14 +43,14 @@
             border-radius: 20px;
             overflow: hidden;
         }
-        .progress-container[value]::before {
+        .progress-container::before {
             content: "";
             position: absolute;
             top: 0;
             left: 0;
             height: 100%;
-            width: [value];
-            background: #323232;
+            width: var(--pseudo-width);
+            background: #000000;
           }
         .signup-form {
             background-color: white;
@@ -175,7 +178,7 @@
     </nav>
     <main>
         <div class="progress-container">
-            <progress value="75" max="100">75%</progress>
+            <progress value={progress} max="100"></progress>
         </div>
         <section class="signup-form">
             <h1 class="signup-title" id="signup-title"></h1>

@@ -1,13 +1,19 @@
 window.onload = function () {
     let tab = 0 // Initial Tab Value
+    let progress = 0
+    const root = document.querySelector(":root");
     document.getElementById('signup-title').innerHTML = 'Welcome!'
     showTab(tab)
     document.getElementById('next-button').addEventListener("click", function(){
         tab += 1
+        progress += 25
+        root.style.setProperty("--pseudo-width", `${progress}%`);
         nextTab(tab)
     })
     document.getElementById('prev-button').addEventListener("click", function(){
         tab -= 1
+        progress -= 25
+        root.style.setProperty("--pseudo-width", `${progress}%`);
         prevTab(tab)
     })
 
