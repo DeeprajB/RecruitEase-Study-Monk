@@ -2,6 +2,21 @@ window.onload = async function() {
     const response = await fetch('https://recruit-ease-backend.vercel.app/candidate/getAll');
     const candidates = await response.json();
 
+    let token = window.localStorage.getItem("token")
+    let name = window.localStorage.getItem("name")
+    if (token && name) {
+        let x = document.getElementById("loginbuttontext")
+        x.innerHTML = name
+        document.getElementById("loginbutton").onclick = function () {
+            localStorage.removeItem("name")
+            localStorage.removeItem("token")
+            location.href = "/pages/homepage.html";
+        };
+    }else {
+        location.href = "/pages/login.html";
+    }
+
+
     var rolefiltered = candidates.candidates;
     var alltable = document.getElementById('alltable');
     populateTable(rolefiltered,alltable)
