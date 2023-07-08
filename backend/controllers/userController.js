@@ -1,5 +1,3 @@
-const { existsSync } = require("fs")
-const user = require("../models/user")
 const userModel = require("../models/user")
 const bcrypt = require("bcrypt")
 const jwt = require("jsonwebtoken")
