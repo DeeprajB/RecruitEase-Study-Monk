@@ -9,7 +9,7 @@ app.use(express.json())
 app.use("/users",userRouter)
 app.use("/candidate",candidateRouter)
 
-mongoose.connect(process.env.MONGODB_URI).then(() => {
+module.exports = mongoose.connect(process.env.MONGODB_URI).then(() => {
     app.listen(4000, ()=>{
         console.log('Server started on port 4000')
     })
@@ -17,4 +17,5 @@ mongoose.connect(process.env.MONGODB_URI).then(() => {
 .catch((error) => {
     console.log(error)
 })
+
 
